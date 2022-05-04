@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="95dp"
+    app:cardBackgroundColor="@color/card.blue"
+    app:cardCornerRadius="5dp"
+    android:layout_marginBottom="10dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/ivPhoto"
+            android:layout_width="95dp"
+            android:layout_height="0dp"
+            android:background="@color/tertiary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/tvTitle"
+            style="@style/Text.Body2.Bold"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:background="@color/tertiary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivPhoto"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <kz.adamant.common.widgets.RateStarView
+            android:id="@+id/vStarRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <View
+            android:id="@+id/_lineCategory"
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tertiary"
+            app:layout_constraintStart_toStartOf="@id/vStarRate"
+            app:layout_constraintTop_toBottomOf="@+id/vStarRate" />
+
+        <View
+            android:id="@+id/tvCategory"
+            android:layout_width="100dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="3dp"
+            android:background="@color/tertiary"
+            app:layout_constraintBottom_toBottomOf="@+id/_lineCategory"
+            app:layout_constraintStart_toEndOf="@+id/_lineCategory"
+            app:layout_constraintTop_toTopOf="@+id/_lineCategory"
+            tools:text="Mexician" />
+
+        <View
+            android:id="@+id/cvComplexity"
+            android:layout_width="60dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="13dp"
+            android:paddingVertical="2dp"
+            android:background="@color/tertiary"
+            app:layout_constraintEnd_toStartOf="@+id/tvTimeToCook"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/_lineCategory"
+            app:layout_constraintTop_toBottomOf="@+id/_lineCategory"/>
+
+        <View
+            android:id="@+id/tvTimeToCook"
+            android:layout_width="70dp"
+            android:layout_height="15dp"
+            android:background="@color/tertiary"
+            android:layout_marginHorizontal="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cvComplexity"
+            app:layout_constraintEnd_toStartOf="@+id/tvCalorie"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@+id/cvComplexity"
+            app:layout_constraintTop_toTopOf="@+id/cvComplexity"/>
+
+        <View
+            android:id="@+id/tvCalorie"
+            android:layout_width="70dp"
+            android:layout_height="15dp"
+            android:background="@color/tertiary"
+            android:layout_marginHorizontal="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTimeToCook"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@+id/tvTimeToCook"
+            app:layout_constraintTop_toTopOf="@+id/tvTimeToCook" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

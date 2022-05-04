@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/favourites_navigation"
+    app:startDestination="@id/favouritesFragment">
+
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="kz.adamant.favourites.ui.FavouritesFragment"
+        android:label="FavouritesFragment" >
+        <action
+            android:id="@+id/action_favouritesFragment_to_recipe_navigation"
+            app:destination="@id/recipe_navigation" >
+            <argument
+                android:name="recipe"
+                app:argType="kz.adamant.recipe.ui.models.RecipeDvo" />
+        </action>
+    </fragment>
+
+    <include app:graph="@navigation/recipe_navigation" />
+
+</navigation>

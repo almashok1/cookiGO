@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main.background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/BaseToolbar"
+        app:title="@string/tabs.favourites" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSearch"
+        style="@style/TextInputLayout.Outline"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        app:hintEnabled="false"
+        app:startIconDrawable="@drawable/ic_search_black_20">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearch"
+            style="@style/TextInputEditText.Form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/common.search"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSavedRecipes"
+        style="@style/Text.Body3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        tools:text="0 saved recipes" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="20dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:id="@+id/vgContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <kz.adamant.common.widgets.EmptyStateView
+                android:id="@+id/vEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:image="@drawable/ic_pasta_amigo"
+                app:btnTitle="@string/favourites.emptyBtnText"
+                app:emptyDescription="@string/favourites.emptyDescription"
+                app:emptyTitle="@string/favourites.emptyTitle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="100dp"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/view_daily_recommendation" />
+
+        </FrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/vgShimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            app:shimmer_auto_start="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/view_daily_recommendation_shimmer_item" />
+
+                <include layout="@layout/view_daily_recommendation_shimmer_item" />
+
+                <include layout="@layout/view_daily_recommendation_shimmer_item" />
+
+                <include layout="@layout/view_daily_recommendation_shimmer_item" />
+
+                <include layout="@layout/view_daily_recommendation_shimmer_item" />
+
+                <include layout="@layout/view_daily_recommendation_shimmer_item" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

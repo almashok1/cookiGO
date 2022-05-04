@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginBottom="1dp"
+    android:backgroundTint="@color/item.disabled.secondary.60">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/vCheck"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="?selectableItemBackgroundBorderless"
+        android:paddingVertical="7.5dp"
+        app:srcCompat="@drawable/ic_checklist_checkmark" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        style="@style/Text.Body2.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:textColor="@color/text.edit"
+        tools:text="Potatoes" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/vMinus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="?selectableItemBackgroundBorderless"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="7.5dp"
+        app:srcCompat="@drawable/ic_circle_minus" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvQuantityUnit"
+        style="@style/Text.Body2.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="?selectableItemBackgroundBorderless"
+        android:textColor="@color/text.edit"
+        tools:text="1 kg" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/vPlus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="?selectableItemBackgroundBorderless"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="7.5dp"
+        app:srcCompat="@drawable/ic_circle_plus" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/vDelete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="?selectableItemBackgroundBorderless"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="7.5dp"
+        app:srcCompat="@drawable/ic_trash_25" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

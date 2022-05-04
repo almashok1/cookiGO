@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_main_5"
+    android:paddingBottom="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/_tvSearch"
+        style="@style/Text.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/common.search"
+        android:textColor="@color/text.edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvReset"
+        style="@style/Text.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/common.reset"
+        android:textColor="@color/text.edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/_tvComplexity"
+        style="@style/Text.Body2.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/common.complexity"
+        android:textColor="@color/text.edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_tvSearch" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:singleSelection="true"
+        app:layout_constraintStart_toStartOf="@+id/_tvComplexity"
+        app:layout_constraintTop_toBottomOf="@+id/_tvComplexity">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipEasy"
+            style="@style/Button.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/common.easy" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipMedium"
+            style="@style/Button.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/common.medium" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipHard"
+            style="@style/Button.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/common.hard" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/_tvCookingTime"
+        style="@style/Text.Body2.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/common.cookingTimeTitle"
+        android:textColor="@color/text.edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/_tvUpTo10"
+        style="@style/Text.Regular.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/common.cookingTime.upTo10min"
+        android:textColor="@color/text.edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_tvCookingTime" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/_tvMoreThan2h"
+        style="@style/Text.Regular.12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/common.cookingTime.moreThan2h"
+        android:textColor="@color/text.edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_tvCookingTime" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/slider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:stepSize="10"
+        android:translationY="-8dp"
+        app:trackColorActive="@color/text.edit"
+        app:trackColorInactive="@color/text.disabled"
+        app:thumbColor="@color/main.background"
+        app:thumbStrokeColor="@color/text.edit"
+        app:thumbStrokeWidth="4dp"
+        android:valueFrom="0"
+        android:valueTo="130"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_tvUpTo10"
+        app:values="@array/cookingTime.slider.values" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/_tvNumberOfCalories"
+        style="@style/Text.Body2.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/common.calorie.numberOf"
+        android:textColor="@color/text.edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_text_rounded_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_tvNumberOfCalories">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMinus"
+            style="@style/Text.Body2.Medium"
+            android:layout_width="36dp"
+            android:layout_height="30dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:text="@string/common.minus"
+            android:textColor="@color/text.edit" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCalories"
+            style="@style/Text.Body2.Medium"
+            android:layout_width="36dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/text.edit" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPlus"
+            style="@style/Text.Body2.Medium"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:text="@string/common.plus"
+            android:textColor="@color/text.edit" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnApply"
+        style="@style/Button.Primary.Wrap"
+        android:layout_marginTop="16dp"
+        android:text="@string/common.apply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

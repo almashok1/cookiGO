@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+<!--    <color name="text.secondary">#EBF8FF</color>-->
+<!--    <color name="text.secondary.27">#45D5F1FF</color>-->
+<!--    <color name="text.edit">#FFFFFF</color>-->
+<!--    <color name="text.edit.inverse">#000000</color>-->
+<!--    <color name="main">#FFD633</color>-->
+<!--    <color name="tertiary">@color/gray_75</color>-->
+<!--    <color name="item.disabled">@color/gray_55</color>-->
+<!--    <color name="item.disabled.secondary">@color/md_grey_500</color>-->
+<!--    <color name="main.disabled">#FFEB9D</color>-->
+<!--    <color name="main.background">@color/gray_75</color>-->
+<!--    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/text.edit</color>-->
+
+</resources>

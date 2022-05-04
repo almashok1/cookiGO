@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="2dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="4dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/RoundedShape.10"
+                app:srcCompat="@color/tertiary" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/vgTimer"
+                android:layout_width="55dp"
+                android:layout_height="27dp"
+                android:layout_marginEnd="4dp"
+                android:translationY="-14dp"
+                app:cardBackgroundColor="@color/main"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="@+id/ivImage"
+                app:layout_constraintTop_toBottomOf="@+id/ivImage">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="3dp"
+                    app:srcCompat="@drawable/ic_clock_alarm" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/Text.Body2.SemiBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text.edit"
+                app:layout_constraintEnd_toEndOf="@+id/ivImage"
+                app:layout_constraintStart_toStartOf="@+id/ivImage"
+                app:layout_constraintTop_toBottomOf="@+id/ivImage"
+                tools:text="Test test" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescription"
+                style="@style/Text.Regular.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_max="wrap"
+                app:layout_constraintHeight_max="wrap"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="5"
+                android:textColor="@color/text.edit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Test test \n te\nt\nt\nrasrasrsasr\nrras" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStepNum"
+        style="@style/Text.Body1.Bold"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/bg_text_circle"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:textColor="@color/text.edit" />
+
+</FrameLayout>

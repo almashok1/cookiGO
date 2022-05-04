@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auth.onboarding.action">Get started</string>
+    <string name="auth.onboarding.title1">Daily selection of fresh recipes</string>
+    <string name="auth.onboarding.title2">Convenient search and filtering of recipes</string>
+    <string name="auth.onboarding.title3">Save your favourite recipes</string>
+    <string name="auth.welcome">Welcome to</string>
+    <string name="auth.hint.email">E-mail</string>
+    <string name="auth.hint.name">Name</string>
+    <string name="auth.hint.username">Username</string>
+    <string name="auth.hint.password">Password</string>
+    <string name="auth.hint.forgot">Forgot password?</string>
+
+    <string name="common.next">Next</string>
+    <string name="common.add">Add</string>
+    <string name="common.addAll"><u>Add all</u></string>
+    <string name="common.lets_start">Let’s start!</string>
+    <string name="common.login">Log in</string>
+    <string name="common.login.underline"><u>Log in</u></string>
+    <string name="common.logout">Logout</string>
+    <string name="common.chicken">Chicken</string>
+    <string name="common.potato">Potato</string>
+    <string name="common.milk">Milk</string>
+    <string name="common.carrot">Carrot</string>
+
+    <string name="common.search">Search</string>
+    <string name="common.apply">Apply</string>
+    <string name="common.reset">Reset</string>
+    <string name="common.complexity">Complexity</string>
+    <string name="common.easy">Easy</string>
+    <string name="common.medium">Medium</string>
+    <string name="common.hard">Hard</string>
+    <string name="common.calorie">%s kcal</string>
+    <string name="common.calorie.numberOf">Number of calories</string>
+    <string name="common.cookingTime">%s min</string>
+    <string name="common.cookingTimeEndLine">%d\nmin</string>
+    <string name="common.cookingTimeTitle">Cooking time</string>
+    <string name="common.cookingTime.upTo10min">up to 10 minutes</string>
+    <string name="common.cookingTime.moreThan2h">more than 2 hours</string>
+    <string name="common.minus">-</string>
+    <string name="common.plus">+</string>
+    <string name="common.enterText">Enter text</string>
+    <string name="common.publish">Publish</string>
+
+    <string name="auth.email.invalid">Invalid e-mail</string>
+    <string name="auth.name.invalid">Name should be longer than 4 symbols</string>
+    <string name="auth.password.invalid">Password must contain at least 8 symbols, 1 uppercase, 1 number and 1 special symbol</string>
+    <string name="auth.password.wrong">Wrong password! Try again.</string>
+
+    <string name="preferences.title">Choose your favourites</string>
+    <string name="preferences.description">Choose at least 3. We’ll make some special recipe for you.</string>
+    <string name="preferences.cuisines">Cuisines</string>
+    <string name="preferences.categories">Categories</string>
+
+    <string name="tabs.home">Home</string>
+    <string name="tabs.favourites">Favourites</string>
+    <string name="tabs.checklist">Checklist</string>
+    <string name="tabs.account">Account</string>
+
+    <string name="home.dailyRecommendation">Daily recommendation</string>
+    <string name="home.recommendation">Recommendations</string>
+    <string name="home.intro">%s, let’s cook!</string>
+    <string name="home.leaveFeedback">Leave Feedback</string>
+
+    <string name="recipe.title">Recipe</string>
+    <string name="recipe.portions">Portions</string>
+
+    <string name="recipe.detail.ingredients">Ingredients</string>
+    <string name="recipe.detail.stepByStep">Step by step</string>
+    <string name="recipe.detail.review">Review</string>
+    <string name="recipe.stepNumber">Step %s</string>
+
+    <string name="favourites.savedRecipes">%d saved recipes</string>
+    <string name="favourites.emptyTitle">Save recipes</string>
+    <string name="favourites.emptyDescription">View and save recipes. ‎Your list of saved recipes will be here.</string>
+    <string name="favourites.emptyBtnText">Recipes</string>
+
+    <string name="checklist.productName">The product\'s name</string>
+    <string name="checklist.quantity">Quantity</string>
+    <string name="checklist.units">Units</string>
+    <string name="checklist.emptyTitle">It’s empty now</string>
+    <string name="checklist.emptyDescription">Add more ingredients so we can help you to shop</string>
+    <string name="checklist.emptyBtnText">Add ingredients</string>
+
+    <string name="search.byCuisine">By cuisine</string>
+    <string name="search.byCategory">By category</string>
+    <string name="search.byIngredients">By ingredients</string>
+    <string name="search.emptyTitle">Not found</string>
+    <string name="search.emptyDescription">Try again with different filter</string>
+
+    <string name="general_error_message">Something went wrong, please try again</string>
+
+    <string-array name="cookingTime.slider.values">
+        <item>0</item>
+        <item>40</item>
+    </string-array>
+</resources>

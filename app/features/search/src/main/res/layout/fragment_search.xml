@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main.background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/BaseToolbar"
+        app:title="@string/common.search"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSearch"
+        style="@style/TextInputLayout.Outline"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        app:hintEnabled="false"
+        app:endIconMode="custom"
+        app:startIconTint="@color/text.edit"
+        app:startIconDrawable="@drawable/ic_search_black_20">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearch"
+            style="@style/TextInputEditText.Form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:hint="@string/common.search"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="20dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/vgCuisine"
+                android:layout_width="match_parent"
+                android:layout_height="152dp"
+                android:background="?selectableItemBackground">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedShape.10"
+                    app:srcCompat="@drawable/bg_image_cuisine" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Text.Subtitle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/item.disabled.secondary.60"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:minHeight="40dp"
+                    android:paddingHorizontal="8dp"
+                    android:text="@string/search.byCuisine"
+                    android:textColor="@color/text.edit" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/vgCategory"
+                android:layout_width="match_parent"
+                android:layout_height="152dp"
+                android:layout_marginTop="16dp"
+                android:background="?selectableItemBackground">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedShape.10"
+                    app:srcCompat="@drawable/bg_image_category" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Text.Subtitle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/item.disabled.secondary.60"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:minHeight="40dp"
+                    android:paddingHorizontal="8dp"
+                    android:text="@string/search.byCategory"
+                    android:textColor="@color/text.edit" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/vgIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="152dp"
+                android:layout_marginTop="16dp"
+                android:background="?selectableItemBackground">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedShape.10"
+                    app:srcCompat="@drawable/bg_image_ingredients" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Text.Subtitle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/item.disabled.secondary.60"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:minHeight="40dp"
+                    android:paddingHorizontal="8dp"
+                    android:text="@string/search.byIngredients"
+                    android:textColor="@color/text.edit" />
+
+            </FrameLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

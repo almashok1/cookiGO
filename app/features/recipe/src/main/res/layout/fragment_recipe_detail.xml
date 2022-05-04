@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main.background"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/_top"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/tertiary"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/RoundedShapeBottom.10" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="18dp"
+                        android:minHeight="16dp"
+                        app:cardBackgroundColor="@color/main.background"
+                        app:cardCornerRadius="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:background="@color/main.background">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="6dp"
+                            android:paddingVertical="2dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvRate"
+                                style="@style/Text.Regular.12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text.secondary"
+                                tools:text="4.9" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginStart="2dp"
+                                app:srcCompat="@drawable/ic_rate_star"
+                                app:tint="@color/main" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCommentsCount"
+                                style="@style/Text.Regular.12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:textColor="@color/text.secondary"
+                                tools:text="(14)" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivFavourite"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        app:srcCompat="@drawable/ic_heart_full" />
+
+                </FrameLayout>
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    style="@style/BaseToolbar"
+                    app:navigationIcon="@drawable/ic_back_filled"
+                    app:title="@string/recipe.title" />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRecipeName"
+                style="@style/Text.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/text.secondary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/_top"
+                tools:text="Pancakes" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivShare"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvRecipeName"
+                app:srcCompat="@drawable/ic_share" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPortions"
+                style="@style/Text.Caption1.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_text_rounded_5"
+                android:paddingVertical="8dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="12dp"
+                android:text="@string/recipe.portions"
+                android:textColor="@color/text.edit"
+                app:layout_constraintStart_toStartOf="@+id/tvRecipeName"
+                app:layout_constraintTop_toBottomOf="@id/tvRecipeName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/_tvPortionsRightBg"
+                style="@style/Text.Caption1.Light"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_rounded_5"
+                android:backgroundTint="@color/main.background"
+                android:paddingVertical="8dp"
+                android:paddingStart="4dp"
+                android:text=""
+                android:textColor="@color/text.edit"
+                android:translationX="-8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPortions"
+                app:layout_constraintStart_toEndOf="@+id/tvPortions"
+                app:layout_constraintTop_toTopOf="@+id/tvPortions" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:cardBackgroundColor="@color/item.disabled.secondary"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/_tvPortionsRightBg"
+                app:layout_constraintStart_toEndOf="@+id/tvPortions"
+                app:layout_constraintTop_toTopOf="@+id/_tvPortionsRightBg">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPortionMinus"
+                        style="@style/Text.Caption1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:gravity="center"
+                        android:paddingHorizontal="6dp"
+                        android:text="@string/common.minus"
+                        android:textColor="@color/text.secondary" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPortionsSize"
+                        style="@style/Text.Caption1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingHorizontal="4dp"
+                        android:text="1"
+                        android:textColor="@color/text.edit" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPortionPlus"
+                        style="@style/Text.Caption1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:gravity="center"
+                        android:paddingHorizontal="6dp"
+                        android:text="@string/common.plus"
+                        android:textColor="@color/text.edit" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivAlarm"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/ivKcal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPortions"
+                app:srcCompat="@drawable/ic_alarm_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCookTime"
+                style="@style/Text.Caption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxWidth="100dp"
+                app:layout_constraintEnd_toEndOf="@+id/ivAlarm"
+                app:layout_constraintStart_toStartOf="@+id/ivAlarm"
+                app:layout_constraintTop_toBottomOf="@id/ivAlarm"
+                tools:text="30-35 min" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivKcal"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                app:layout_constraintEnd_toStartOf="@+id/ivComplexity"
+                app:layout_constraintStart_toEndOf="@+id/ivAlarm"
+                app:layout_constraintTop_toTopOf="@+id/ivAlarm"
+                app:srcCompat="@drawable/ic_fire_calorie_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCalorie"
+                style="@style/Text.Caption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxWidth="100dp"
+                app:layout_constraintEnd_toEndOf="@+id/ivKcal"
+                app:layout_constraintStart_toStartOf="@+id/ivKcal"
+                app:layout_constraintTop_toBottomOf="@id/ivKcal"
+                tools:text="200 kcal" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivComplexity"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivKcal"
+                app:layout_constraintTop_toTopOf="@+id/ivKcal"
+                app:srcCompat="@drawable/ic_bars_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvComplexity"
+                style="@style/Text.Caption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxWidth="100dp"
+                app:layout_constraintEnd_toEndOf="@+id/ivComplexity"
+                app:layout_constraintStart_toStartOf="@+id/ivComplexity"
+                app:layout_constraintTop_toBottomOf="@id/ivComplexity"
+                tools:text="200 kcal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescription"
+                style="@style/Text.Regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCookTime"
+                tools:text="Pat chicken dry with paper towels, season all over with 2 tsp. salt, and tie legs together with kitchen twine. Let sit at room temperature 1 hour." />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvTabs"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="@color/text.secondary.27"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/vTabs"
+                    style="@style/RoundedTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    app:tabIndicatorAnimationMode="elastic" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clipToPadding="false"
+                android:fitsSystemWindows="true"
+                app:layout_constraintTop_toBottomOf="@id/cvTabs">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vp2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:clipToPadding="false"
+                    android:fitsSystemWindows="true"
+                    android:minHeight="220dp"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLeaveFeedback"
+        style="@style/Button.Primary"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/home.leaveFeedback" />
+
+</FrameLayout>

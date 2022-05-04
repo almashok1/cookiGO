@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main.background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/BaseToolbar"
+        app:title="@string/tabs.checklist" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <kz.adamant.checklist.ui.ChecklistView
+            android:id="@+id/vChecklist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <kz.adamant.common.widgets.EmptyStateView
+            android:id="@+id/vEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:btnTitle="@string/checklist.emptyBtnText"
+            app:emptyDescription="@string/checklist.emptyDescription"
+            app:emptyTitle="@string/checklist.emptyTitle"
+            app:image="@drawable/ic_empty_rafiki" />
+
+    </FrameLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginBottom="1dp"
+    android:background="@color/item.disabled.secondary"
+    android:gravity="center_vertical"
+    android:minHeight="30dp"
+    android:weightSum="8">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        style="@style/Text.Body2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:maxLines="1"
+        android:paddingStart="34dp"
+        android:paddingEnd="4dp"
+        android:textColor="@color/text.edit"
+        tools:text="Potatoes" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSize"
+        style="@style/Text.Body2.Light"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:textColor="@color/text.edit"
+        tools:text="3 pcs" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="?selectableItemBackgroundBorderless"
+        android:paddingVertical="4dp"
+        app:srcCompat="@drawable/ic_add_circle_20" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

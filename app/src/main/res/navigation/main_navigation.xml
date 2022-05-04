@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/auth_navigation">
+
+    <include app:graph="@navigation/auth_navigation" />
+    <include app:graph="@navigation/main_screen_navigation" />
+    <include app:graph="@navigation/user_preferences_navigation" />
+
+    <action
+        android:id="@+id/action_global_auth_screen"
+        app:destination="@id/auth_navigation"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popUpTo="@id/main_navigation"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_global_user_preferences_screen"
+        app:destination="@id/user_preferences_navigation"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popUpTo="@id/auth_navigation"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_global_main_feature_screen"
+        app:destination="@id/main_screen_navigation"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popUpTo="@id/auth_navigation"
+        app:popUpToInclusive="true" />
+
+</navigation>

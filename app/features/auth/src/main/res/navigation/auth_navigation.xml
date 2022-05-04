@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/auth_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="kz.adamant.auth.LoginFragment"
+        android:label="LoginFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/authOnboardingFragment"
+        android:name="kz.adamant.auth.ui.AuthOnboardingFragment"
+        android:label="AuthOnboardingFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/authRegisterFragment"
+        android:name="kz.adamant.auth.ui.register.AuthRegisterFragment"
+        android:label="AuthRegisterFragment" />
+
+    <fragment
+        android:id="@+id/authLoginFragment"
+        android:name="kz.adamant.auth.ui.login.AuthLoginFragment"
+        android:label="AuthLoginFragment" />
+
+</navigation>

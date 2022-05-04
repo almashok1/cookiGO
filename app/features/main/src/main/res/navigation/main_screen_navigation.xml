@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_screen_navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="kz.adamant.main.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_main_to_recipe_navigation"
+            app:destination="@id/recipe_navigation" >
+            <argument
+                android:name="recipe"
+                app:argType="kz.adamant.recipe.ui.models.RecipeDvo" />
+        </action>
+        <action
+            android:id="@+id/action_mainFragment_to_recipe_navigation"
+            app:destination="@id/search_navigation" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_search_navigation"
+            app:destination="@id/search_navigation" />
+    </fragment>
+
+    <include app:graph="@navigation/recipe_navigation" />
+    <include app:graph="@navigation/search_navigation" />
+
+</navigation>

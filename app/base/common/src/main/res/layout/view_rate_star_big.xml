@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="105dp"
+    android:layout_height="21dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        app:srcCompat="@drawable/ic_rate_star" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        app:srcCompat="@drawable/ic_rate_star" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        app:srcCompat="@drawable/ic_rate_star" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        app:srcCompat="@drawable/ic_rate_star" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        app:srcCompat="@drawable/ic_rate_star" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

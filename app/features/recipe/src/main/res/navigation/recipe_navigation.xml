@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recipe_navigation"
+    app:startDestination="@id/recipeDetailFragment">
+
+    <argument
+        android:name="recipe"
+        app:argType="kz.adamant.recipe.ui.models.RecipeDvo" />
+
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="kz.adamant.recipe.ui.recipe.RecipeDetailFragment"
+        android:label="RecipeDetailFragment" >
+        <argument
+            android:name="recipe"
+            app:argType="kz.adamant.recipe.ui.models.RecipeDvo" />
+        <action
+            android:id="@+id/action_recipeDetailFragment_to_recipeStepDetailFragment"
+            app:destination="@id/recipeStepDetailFragment" />
+        <action
+            android:id="@+id/action_recipeDetailFragment_to_recipeLeaveFeedbackFragment"
+            app:destination="@id/recipeLeaveFeedbackFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/recipeStepDetailFragment"
+        android:name="kz.adamant.recipe.ui.recipe.step.RecipeStepDetailFragment"
+        android:label="RecipeStepDetailFragment" >
+        <argument
+            android:name="step"
+            app:argType="kz.adamant.recipe.domain.CookingStep" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/recipeLeaveFeedbackFragment"
+        android:name="kz.adamant.recipe.ui.recipe.review.RecipeLeaveFeedbackFragment"
+        android:label="RecipeLeaveFeedbackFragment" >
+        <argument
+            android:name="recipeId"
+            app:argType="long" />
+    </dialog>
+
+</navigation>
