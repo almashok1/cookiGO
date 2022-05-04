@@ -1,0 +1,2 @@
+# cookiGO
+Just diploma project
