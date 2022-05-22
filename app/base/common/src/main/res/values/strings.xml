@@ -88,10 +88,17 @@
     <string name="search.emptyTitle">Not found</string>
     <string name="search.emptyDescription">Try again with different filter</string>
 
+    <string name="account.title">Profile</string>
+
     <string name="general_error_message">Something went wrong, please try again</string>
 
     <string-array name="cookingTime.slider.values">
         <item>0</item>
         <item>40</item>
+    </string-array>
+
+    <string-array name="calories.slider.values">
+        <item>0</item>
+        <item>5000</item>
     </string-array>
 </resources>

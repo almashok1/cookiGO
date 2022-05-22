@@ -4,7 +4,7 @@ object AppConfig {
     const val minSdk = 23
     const val targetSdk = 31
     const val compileSdk = 32
-    const val appId = "kz.adamant.cooking_recipes"
+    const val appId = "kz.adamant.cookigo"
     const val androidTestInstrumentation = "androidx.test.runner.AndroidJUnitRunner"
     val jdk = JavaVersion.VERSION_1_8
 }

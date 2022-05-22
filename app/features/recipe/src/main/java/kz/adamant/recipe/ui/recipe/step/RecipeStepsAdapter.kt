@@ -10,7 +10,8 @@ import kz.adamant.recipe.databinding.ItemStepByStepBinding
 import kz.adamant.recipe.domain.CookingStep
 
 class RecipeStepsAdapter(
-    private val onClick: (CookingStep) -> Unit
+    private val onClick: (CookingStep) -> Unit,
+    private val onTimerClick: (CookingStep) -> Unit
 ) : BindingBasicAsyncRvAdapter<CookingStep, ItemStepByStepBinding>(
     Callback(), ItemStepByStepBinding::inflate
 ) {
@@ -32,6 +33,7 @@ class RecipeStepsAdapter(
         tvTitle.text = root.context.getString(R.string.recipe_stepNumber, item.stepNumber)
         vgTimer.isVisible = (item.duration ?: 0) > 0
         ivImage.loadWithDriveUrl(item.image)
+        vgTimer.onSafeClick { onTimerClick(item) }
         root.onSafeClick { onClick(item) }
     }
 

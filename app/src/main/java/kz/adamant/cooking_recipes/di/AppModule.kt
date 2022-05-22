@@ -26,6 +26,7 @@ import kz.adamant.recipe.ui.recipe.RecipeDetailViewModel
 import kz.adamant.recipe.ui.recipe.ingredients.RecipeIngredientViewModel
 import kz.adamant.recipe.ui.recipe.review.RecipeReviewViewModel
 import kz.adamant.recipe.ui.recipe.step.RecipeStepByStepViewModel
+import kz.adamant.recipe.ui.recipe.step.timer.RecipeTimerViewModel
 import kz.adamant.search.SearchNavigator
 import kz.adamant.search.ui.SearchViewModel
 import kz.adamant.search.ui.filter.SearchFilterViewModel
@@ -58,6 +59,7 @@ val appModule = module {
     viewModel { RecipeDetailViewModel(get(), get(), get()) }
     viewModel { RecipeIngredientViewModel(get(), get(named("MAIN"))) }
     viewModel { RecipeStepByStepViewModel(get()) }
+    viewModel { parameters -> RecipeTimerViewModel(parameters.get()) }
     viewModel { RecipeReviewViewModel(get()) }
     viewModel { FavouritesViewModel(get(), get(), get(), get()) }
     viewModel { ChecklistViewModel(get(named("MAIN"))) }

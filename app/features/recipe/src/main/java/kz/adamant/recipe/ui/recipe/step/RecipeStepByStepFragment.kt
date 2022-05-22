@@ -21,9 +21,10 @@ class RecipeStepByStepFragment : BindingFragment<FragmentStepByStepBinding>(
 
     private val vm get() = vm(RecipeStepByStepViewModel::class)!!
 
-    private val adapter = RecipeStepsAdapter {
-        vm.showDetail(it)
-    }
+    private val adapter = RecipeStepsAdapter(
+        { vm.showDetail(it) },
+        { vm.showStepTimer(it) }
+    )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

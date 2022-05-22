@@ -3,8 +3,10 @@ package kz.adamant.recipe.ui.recipe.step
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.Dispatchers
 import kz.adamant.common.BaseViewModel
+import kz.adamant.common.extensions.getSlideAnimUpNavBuilder
 import kz.adamant.common.extensions.getState
 import kz.adamant.common.extensions.liveData
+import kz.adamant.common.extensions.navigateWithAnim
 import kz.adamant.recipe.domain.CookingStep
 import kz.adamant.recipe.domain.RecipeInteractor
 import kz.adamant.recipe.ui.recipe.RecipeDetailFragmentDirections
@@ -38,4 +40,13 @@ class RecipeStepByStepViewModel(
         )
     }
 
+    fun showStepTimer(step: CookingStep) {
+        if (step.duration == null) return
+        withFragment {
+            it.findNavController().navigateWithAnim(
+                RecipeDetailFragmentDirections.actionGlobalRecipeTimerFragment(step.duration),
+                navOptions = getSlideAnimUpNavBuilder()
+            )
+        }
+    }
 }

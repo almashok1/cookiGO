@@ -49,15 +49,6 @@ class SearchFilterFragment : BindingBottomSheetFragment<FragmentSearchFilterBind
             }
         }
 
-        binding.tvPlus.onSafeClick {
-            vm.updateCalories(vm.data.calories?.plus(1) ?: 1)
-            updateCalories()
-        }
-        binding.tvMinus.onSafeClick {
-            vm.updateCalories(vm.data.calories?.minus(1) ?: 1)
-            updateCalories()
-        }
-
         binding.btnApply.onSafeClick {
             vm.updateComplexity(
                 when (binding.chipGroup.checkedChipId) {
@@ -68,6 +59,7 @@ class SearchFilterFragment : BindingBottomSheetFragment<FragmentSearchFilterBind
                 }
             )
             vm.updateRange(binding.slider.values[0].toInt(), binding.slider.values[1].toInt())
+            vm.updateCalories(binding.sliderCalories.value.toInt())
             setToPrevSavedState(KEY_OBSERVE, vm.data)
             findNavController().navigateUp()
         }
@@ -79,7 +71,8 @@ class SearchFilterFragment : BindingBottomSheetFragment<FragmentSearchFilterBind
     }
 
     private fun setFilter(filter: SearchFilter) = with(binding) {
-        tvCalories.text = (filter.calories ?: 1).coerceAtLeast(0).toString()
+        val calories = (filter.calories ?: 1).coerceAtLeast(0)
+        binding.sliderCalories.setValue(calories.toFloat())
         when(filter.complexityId) {
             1 -> chipGroup.check(kz.adamant.search.R.id.chipEasy)
             2 -> chipGroup.check(kz.adamant.search.R.id.chipMedium)
@@ -89,10 +82,6 @@ class SearchFilterFragment : BindingBottomSheetFragment<FragmentSearchFilterBind
         val min = vm.data.minCookingTime
         val max = vm.data.maxCookingTime
         if (min != null && max != null) binding.slider.setValues(min.toFloat(), max.toFloat())
-    }
-
-    private fun updateCalories() {
-        binding.tvCalories.text = (vm.data.calories ?: 1).toString()
     }
 
     companion object {

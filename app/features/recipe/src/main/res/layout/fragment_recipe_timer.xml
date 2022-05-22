@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnBack"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_filled" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressIndicator"
+        style="@style/Widget.MaterialComponents.CircularProgressIndicator"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:theme="?attr/circularProgressIndicatorStyle"
+        app:indicatorColor="@color/main"
+        app:indicatorSize="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:trackColor="@color/text.secondary"
+        app:trackCornerRadius="20dp"
+        app:trackThickness="10dp"
+        tools:progress="60" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_margin="40dp"
+        android:gravity="center"
+        android:textColor="@color/text.secondary"
+        style="@style/Text.Body2.Bold"
+        android:textSize="30sp"
+        android:background="@drawable/bg_circular_main"
+        app:layout_constraintBottom_toBottomOf="@+id/progressIndicator"
+        app:layout_constraintEnd_toEndOf="@+id/progressIndicator"
+        app:layout_constraintStart_toStartOf="@+id/progressIndicator"
+        app:layout_constraintTop_toTopOf="@+id/progressIndicator"
+        tools:text="3 m 15 s" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnReset"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_rounded_main_5"
+        android:backgroundTint="@color/main"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlayPause"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressIndicator"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_timer_reset" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnPlayPause"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_rounded_main_5"
+        android:backgroundTint="@color/main"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnReset"
+        app:layout_constraintTop_toTopOf="@+id/btnReset"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_timer_play" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

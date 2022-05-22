@@ -40,5 +40,14 @@
             android:name="recipeId"
             app:argType="long" />
     </dialog>
+    <fragment
+        android:id="@+id/recipeTimerFragment"
+        android:name="kz.adamant.recipe.ui.recipe.step.timer.RecipeTimerFragment"
+        android:label="RecipeTimerFragment" >
+        <argument
+            android:name="duration"
+            app:argType="long" />
+    </fragment>
+    <action android:id="@+id/action_global_recipeTimerFragment" app:destination="@id/recipeTimerFragment" />
 
 </navigation>

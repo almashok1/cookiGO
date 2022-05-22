@@ -139,46 +139,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/slider" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linearLayoutCompat"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/bg_text_rounded_5"
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sliderCalories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:stepSize="1"
+        android:translationY="-8dp"
+        android:valueFrom="0"
+        android:valueTo="5000"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/_tvNumberOfCalories">
+        app:layout_constraintTop_toBottomOf="@+id/_tvNumberOfCalories"
+        app:thumbColor="@color/main.background"
+        app:thumbStrokeColor="@color/text.edit"
+        app:thumbStrokeWidth="4dp"
+        app:trackColorActive="@color/text.edit"
+        app:trackColorInactive="@color/text.disabled"
+        app:values="@array/calories.slider.values" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvMinus"
-            style="@style/Text.Body2.Medium"
-            android:layout_width="36dp"
-            android:layout_height="30dp"
-            android:background="?selectableItemBackgroundBorderless"
-            android:gravity="center"
-            android:text="@string/common.minus"
-            android:textColor="@color/text.edit" />
+<!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--        android:id="@+id/linearLayoutCompat"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:background="@drawable/bg_text_rounded_5"-->
+<!--        >-->
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvCalories"
-            style="@style/Text.Body2.Medium"
-            android:layout_width="36dp"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:text="1"
-            android:textColor="@color/text.edit" />
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/tvMinus"-->
+<!--            style="@style/Text.Body2.Medium"-->
+<!--            android:layout_width="36dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:background="?selectableItemBackgroundBorderless"-->
+<!--            android:gravity="center"-->
+<!--            android:text="@string/common.minus"-->
+<!--            android:textColor="@color/text.edit" />-->
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvPlus"
-            style="@style/Text.Body2.Medium"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="?selectableItemBackgroundBorderless"
-            android:gravity="center"
-            android:text="@string/common.plus"
-            android:textColor="@color/text.edit" />
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/tvCalories"-->
+<!--            style="@style/Text.Body2.Medium"-->
+<!--            android:layout_width="36dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:gravity="center"-->
+<!--            android:text="1"-->
+<!--            android:textColor="@color/text.edit" />-->
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/tvPlus"-->
+<!--            style="@style/Text.Body2.Medium"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:background="?selectableItemBackgroundBorderless"-->
+<!--            android:gravity="center"-->
+<!--            android:text="@string/common.plus"-->
+<!--            android:textColor="@color/text.edit" />-->
+
+<!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnApply"
@@ -187,6 +205,6 @@
         android:text="@string/common.apply"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+        app:layout_constraintTop_toBottomOf="@+id/sliderCalories" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

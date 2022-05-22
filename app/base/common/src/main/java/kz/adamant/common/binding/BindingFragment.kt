@@ -13,6 +13,7 @@ import kz.adamant.common.BaseViewModel
 import kz.adamant.common.EventObserver
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.parameter.ParametersDefinition
 import kotlin.reflect.KClass
 
 abstract class BindingFragment<B : ViewBinding> constructor(
@@ -60,8 +61,11 @@ abstract class BindingFragment<B : ViewBinding> constructor(
         block(vm(cl) ?: return)
     }
 
-    inline fun <reified T : BaseViewModel> vmCreator(cl: KClass<T>): Pair<KClass<*>, () -> BaseViewModel> {
-        return cl to { getViewModel<T>() }
+    inline fun <reified T : BaseViewModel> vmCreator(
+        cl: KClass<T>,
+        crossinline parameters: () -> ParametersDefinition? = { null }
+    ): Pair<KClass<*>, () -> BaseViewModel> {
+        return cl to { getViewModel<T>(parameters = parameters()) }
     }
 
     override fun onDestroyView() {
